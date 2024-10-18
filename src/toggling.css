@@ -1,0 +1,46 @@
+.text-container {
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggling-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.slide-in {
+  animation-name: slideIn;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-out {
+  animation-name: slideOut;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
