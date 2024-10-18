@@ -30,7 +30,7 @@ const TogglingText = () => {
   return (
     <div className="text-container">
       <p
-        className={`toggling-text ${
+        className={`toggleSmall toggling-text ${
           isAnimating ? "slide-in" : "slide-out"
         } text-emerald-400 text-4xl`}
       >

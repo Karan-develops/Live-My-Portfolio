@@ -187,6 +187,44 @@ button:focus-visible {
 }
 
 @media (max-width: 768px) {
+  .navName {
+    margin-left: 15%;
+  }
+}
+@media (max-width: 768px) {
+  .cB {
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 768px) {
+  * {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 768px) {
+  .leetcodeCustom {
+    font-size: small;
+    padding: 3px;
+  }
+}
+@media (max-width: 768px) {
+  .toggleSmall {
+    font-size: x-large;
+  }
+}
+@media (max-width: 768px) {
+  .cA {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .bannerCustom {
+    margin-top: 60px;
+    font-size: medium;
+  }
+}
+
+@media (max-width: 768px) {
   .typing-text-large {
     font-size: 1em;
   }

@@ -17,7 +17,7 @@ const BannerParticles = () => {
       </div>
       <div className="banner h-full z-10 relative">
         {" "}
-        <div className="flex items-center ml-16 sm:flex-row flex-col md:justify-around h-full">
+        <div className="bannerCustom flex items-center ml-16 sm:flex-row flex-col md:justify-around h-full">
           <div className="lg:flex-0.7 sm:w-[60%] w-full sm:p-10">
             <h1 className="sm:text-3xl text-lg font-bold">Hi There,</h1>
             <h1 className="md:text-4xl text-2xl">
@@ -80,7 +80,7 @@ const BannerParticles = () => {
 
             <button
               onClick={() => handleClick()}
-              className="animate__animated animate__bounce animate__delay-1s animate__repeat-1 bg-purple-700 px-5 py-2 text-white mt-5 flex items-center gap-1 border-none outline-none"
+              className="cB animate__animated animate__bounce animate__delay-1s animate__repeat-1 bg-purple-700 px-5 py-2 text-white mt-5 flex items-center gap-1 border-none outline-none"
             >
               My Socials
               <span>

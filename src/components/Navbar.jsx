@@ -15,12 +15,12 @@ const Navbar = () => {
   return (
     <div className="customShadow z-[1000] sticky top-0 left-0 bg-[#0d0d0d]">
       <div className="flex justify-between items-center p-2 text-white max-w-[1200px] w-[100%] ml-auto mr-12  ">
-        <div className="flex gap-3 items-center ml-[-25vh]">
+        <div className=" navName flex gap-3 items-center ml-[-25vh]">
           <Orbit className="text-emerald-500  text-5xl" />
-          <h1 className="text-emerald-500 text-[28px] font-bold">
+          <h1 className=" text-emerald-500 text-[28px] font-bold">
             Karan <span className="text-[#c9d3fc] ">Aggarwal</span>
           </h1>
-          <Code className="text-emerald-500  text-5xl" />
+          <Code className="cA text-emerald-500  text-5xl" />
         </div>
 
         <div className=" lg:flex hidden cursor-pointer">

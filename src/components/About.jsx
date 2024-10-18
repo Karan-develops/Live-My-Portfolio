@@ -64,7 +64,7 @@ const About = () => {
                   className="border w-[100px] flex items-center rounded-xl px-2 gap-1 cursor-pointer text-white p-1"
                 >
                   <SiLeetcode />
-                  <p>Leetcode</p>
+                  <p className="leetcodeCustom" >Leetcode</p>
                 </a>
               </div>
               <div>
