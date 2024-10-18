@@ -19,7 +19,7 @@ import redis from "../images/lang/redis.png";
 import typeS from "../images/lang/typeS.png";
 import zustand from "../images/lang/zustand.jpg";
 import { FaDesktop } from "react-icons/fa";
-import "F:/Web dev/PORTFOLIO/src/index.css";
+import '../index.css';
 
 const Skills = () => {
   return (
