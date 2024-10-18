@@ -3,7 +3,7 @@ import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import ProjectCard from "./ProjectCard";
 import chatApp from "../images/projects/chatApp.png";
 import ecommerce from "../images/projects/ecommerce.png";
-import sumz from "../images/projects/sumz.png";
+import sumz from "../images/projects/Sumz.png";
 import { GithubIcon, MessageCircleCodeIcon, Sigma } from "lucide-react";
 import { BiStore } from "react-icons/bi";
 
