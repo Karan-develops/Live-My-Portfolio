@@ -88,7 +88,7 @@ const BannerParticles = () => {
               </span>
             </button>
           </div>
-          <img src={heroImg} className="h-[38vh] animate-float mr-12" />
+          <img src={heroImg} className="bannerImgCus h-[38vh] animate-float mr-12" />
         </div>
       </div>
     </div>

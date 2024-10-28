@@ -226,6 +226,12 @@ button:focus-visible {
   }
 }
 @media (max-width: 768px) {
+  .bannerImgCus {
+    margin-top: 8vh;
+    height: 20vh;
+  }
+}
+@media (max-width: 768px) {
   .bannerCustom {
     margin-top: 60px;
     font-size: medium;
