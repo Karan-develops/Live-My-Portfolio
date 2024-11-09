@@ -12,7 +12,7 @@ const About = () => {
     <>
       <div
         id="about"
-        className="flex md:flex-row flex-col mt-5 justify-around lg:p-10  py-30   items-center lg:h-[100vh]"
+        className="flex md:flex-row flex-col mt-5 justify-around lg:p-10 py-30   items-center lg:h-[100vh]"
       >
         <div data-aos="fade-up">
           <img

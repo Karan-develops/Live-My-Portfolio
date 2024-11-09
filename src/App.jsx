@@ -13,6 +13,7 @@ import AOS from "aos";
 import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { ArrowUp } from "lucide-react";
+import ProjectTogether from "./components/ProjectTogether";
 
 function App() {
   function goTop() {
@@ -35,6 +36,9 @@ function App() {
         <Skills />
         <Contact />
         <Project />
+        <div className="pt-20">
+        <ProjectTogether/>
+        </div>
         <Education />
         <CopyRight />
       </div>

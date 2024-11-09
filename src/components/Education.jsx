@@ -9,7 +9,7 @@ import { GoBook } from "react-icons/go";
 
 const Education = () => {
   return (
-    <div id="education" className="sm:py-10 h-full w-[70%] m-auto">
+    <div id="education" className="sm:py-10 h-full w-[70%] m-auto max-sm:w-auto">
       <h1
         data-aos="zoom-out-left"
         className="text-4xl font-bold text-center py-8 text-white"
@@ -18,7 +18,7 @@ const Education = () => {
       </h1>
       <VerticalTimeline>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work max-sm:w-[85%] max-sm:ml-14"
           contentStyle={{ background: "chocolate", color: "#fff", marginLeft:"5px" }}
           date="2022 - 2026"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
@@ -51,7 +51,7 @@ const Education = () => {
           <p className="text-blue-200">Percentage % - 75</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work max-sm:w-[85%] max-sm:ml-14"
           contentStyle={{ background: "green", color: "#fff",marginLeft:"5px" }}
           date="2019-2020"
           iconStyle={{ background: "#87be6f", color: "#434d6c" }}
