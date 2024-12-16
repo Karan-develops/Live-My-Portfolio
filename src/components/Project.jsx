@@ -5,7 +5,9 @@ import chatApp from "../images/projects/chatApp.png";
 import ecommerce from "../images/projects/ec.png";
 import sumz from "../images/projects/Sumz.png";
 import pitch from "../images/projects/ps.png";
+import codeEd from "../images/projects/codeEd.png"
 import {
+  BugPlay,
   GithubIcon,
   MessageCircleCodeIcon,
   Sigma,
@@ -29,35 +31,50 @@ const Project = () => {
         {/* Project-1 */}
         <div data-aos="zoom-in-up" className="project_card_div">
           <div className="rounded-2xl">
-            <img className="project_card_img" src={chatApp} alt="P1" />
+            <img className="project_card_img" src={codeEd} alt="P2" />
             <div className="project_card_textContainer">
               <h1 className="project_card_heading">
-                <MessageCircleCodeIcon className="text-cyan-400 mr-1 -mt-1 size-7" />
-                Real-Time Chat App (Socket - IO)
+                <BugPlay className="text-amber-500 mr-1 -mt-1 text-2xl" />
+                <span className="-mt-[3px]">Full Stack Code Editor - NextJS</span>
               </h1>
-              <p className="project_card_deployed">Deployed ✅</p>
+              <p className="project_card_deployed mt-[2px]">Deployed ✅</p>
               <div className="project_card_links project-description">
-                <div className="flex">
+                <div>
                   <a
-                    href="https://chat-verse-karan.onrender.com"
+                    href="https://karan-code-dev.vercel.app/"
                     target="_blank"
                   >
                     <button className="project_card_liveBtn">Live Url</button>
                   </a>
-                  <div className="project_card_gitHubBtnP">
-                    <a
-                      href="https://github.com/Karan-develops/MERN-ChatApp-Deployed"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <GithubIcon className="project_card_gitIcon" />
-                    </a>
-                  </div>
                 </div>
+                <div className="flex justify-center items-center mr-3">
+                  <a
+                    href="https://github.com/Karan-develops/Live-Full-Stack-Code-Editor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GithubIcon className="relative group text-gray-300 hover:text-emerald-400 transition duration-300 ease-in-out text-lg hover:cursor-pointer ml-5 mt-3" />
+                  </a>
+                </div>
+
                 <div className="mt-2">
                   <ProjectCard
-                    projectDescription="Developed a responsive, full-stack chat application with real-time messaging using modern web technologies. Implemented features such as user authentication, message storage, and seamless deployment on Render."
-                    tech="Technologies Used:- Node JS, Mongo DB, Express,JWT,Socket.io"
+                    projectDescription={[
+                      "• Online IDE with multi-language support (10 languages).",
+                      "• Customizable experience with 5 VSCode themes.",
+                      "• Smart output handling with Success & Error states.",
+                      "• Flexible pricing with Free & Pro plans.",
+                      "• Community-driven code sharing system.",
+                      "• Advanced filtering & search capabilities.",
+                      "• Personal profile with execution history tracking.",
+                      "• Webhook integration support"
+                    ].map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
+                    tech="Technologies Used:- NextJS, Convex, Clerk, Zustand, TypeScript, vercel."
                   />
                 </div>
               </div>
@@ -116,7 +133,6 @@ const Project = () => {
             </div>
           </div>
         </div>
-
         {/* Project-3 */}
         <div data-aos="zoom-in-up" className="project_card_div">
           <div className="rounded-2xl">
@@ -163,12 +179,50 @@ const Project = () => {
         </div>
         {/* Project-4 */}
         <div data-aos="zoom-in-up" className="project_card_div">
+          <div className="rounded-2xl">
+            <img className="project_card_img" src={chatApp} alt="P1" />
+            <div className="project_card_textContainer">
+              <h1 className="project_card_heading">
+                <MessageCircleCodeIcon className="text-cyan-400 mr-1 -mt-1 size-7" />
+                Real-Time Chat App (Socket - IO)
+              </h1>
+              <p className="project_card_deployed">Deployed ✅</p>
+              <div className="project_card_links project-description">
+                <div className="flex">
+                  <a
+                    href="https://chat-verse-karan.onrender.com"
+                    target="_blank"
+                  >
+                    <button className="project_card_liveBtn">Live Url</button>
+                  </a>
+                  <div className="project_card_gitHubBtnP">
+                    <a
+                      href="https://github.com/Karan-develops/MERN-ChatApp-Deployed"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <GithubIcon className="project_card_gitIcon" />
+                    </a>
+                  </div>
+                </div>
+                <div className="mt-2">
+                  <ProjectCard
+                    projectDescription="Developed a responsive, full-stack chat application with real-time messaging using modern web technologies. Implemented features such as user authentication, message storage, and seamless deployment on Render."
+                    tech="Technologies Used:- Node JS, Mongo DB, Express,JWT,Socket.io"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Project-5 */}
+        <div data-aos="zoom-in-up" className="project_card_div">
           <div className="rounded-2xl  ">
             <img src={sumz} className="project_card_img" alt="P4" />
             <div className="project_card_textContainer">
               <h1 className="project_card_heading">
                 <Sigma className="text-orange-500" />
-                Sumz - AI
+                Sumz - AI - Using RapidApi
               </h1>
               <p className="project_card_deployed">Deployed ✅</p>
               <div className="project_card_links project-description">
@@ -193,38 +247,6 @@ const Project = () => {
                     projectDescription="Summarize any kind of article with just one click using the powerful OpenAI model."
                     tech="Technologies Used:- MERN, RapidApi (for api) , React-Redux, netlify."
                   />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Project-5 */}
-        <div data-aos="zoom-in-up" className="project_card_div">
-          <div className="rounded-2xl  ">
-            {/* <img
-              className="project_card_img"
-              alt="P5"
-            /> */}
-            <h1 className="flex justify-center w-[100%] sm:h-[200px]  h-[150px] text-xl">
-              Coming Soon
-            </h1>
-            <div className="project_card_textContainer">
-              <h1 className="project_card_heading">--</h1>
-              <p className="text-yellow-500 text-sm">In Progress🔰</p>
-              <div className="flex gap-2 project-description justify-between flex-wrap">
-                <div>
-                  <a href="" target="_blank">
-                    <button className="project_card_liveBtn">Live Url</button>
-                  </a>
-                </div>
-                <div className="flex justify-center items-center mr-3">
-                  <a href="" target="_blank" rel="noopener noreferrer">
-                    <GithubIcon className="project_card_gitIcon" />
-                  </a>
-                </div>
-                <div className="mt-2">
-                  <ProjectCard projectDescription="Coming Soon" tech="Soon" />
                 </div>
               </div>
             </div>

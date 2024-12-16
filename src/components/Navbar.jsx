@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Code, GithubIcon, Orbit, Mail } from "lucide-react";
+import BackgroundMusic from "./BackgroundMusic";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -93,6 +94,9 @@ const Navbar = () => {
             <a href="#contact">
               <Mail className="relative group text-gray-300 hover:text-red-400 transition duration-300 ease-in-out text-lg hover:cursor-pointer ml-5 mt-3" />
             </a>
+          </>
+          <>
+            <BackgroundMusic />
           </>
         </div>
       </div>

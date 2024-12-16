@@ -14,6 +14,7 @@ import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { ArrowUp } from "lucide-react";
 import ProjectTogether from "./components/ProjectTogether";
+import Marquee from "./components/Marquee";
 
 function App() {
   function goTop() {
@@ -34,6 +35,7 @@ function App() {
       <div className="center">
         <About />
         <Skills />
+        <Marquee/>
         <Contact />
         <Project />
         <div className="pt-20">

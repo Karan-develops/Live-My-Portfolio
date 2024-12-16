@@ -1,5 +1,3 @@
-import React from "react";
-
 const CopyRight = () => {
   return (
     <div className="text-white flex justify-center flex-col items-center pt-24 pb-5">

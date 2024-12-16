@@ -1,4 +1,3 @@
-import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 import heroImg from "../images/heroImg.svg";
@@ -88,7 +87,10 @@ const BannerParticles = () => {
               </span>
             </button>
           </div>
-          <img src={heroImg} className="bannerImgCus h-[38vh] animate-float mr-12" />
+          <img
+            src={heroImg}
+            className="bannerImgCus h-[38vh] animate-float mr-12"
+          />
         </div>
       </div>
     </div>

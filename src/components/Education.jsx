@@ -1,4 +1,3 @@
-import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -9,7 +8,10 @@ import { GoBook } from "react-icons/go";
 
 const Education = () => {
   return (
-    <div id="education" className="sm:py-10 h-full w-[70%] m-auto max-sm:w-auto">
+    <div
+      id="education"
+      className="sm:py-10 h-full w-[70%] m-auto max-sm:w-auto"
+    >
       <h1
         data-aos="zoom-out-left"
         className="text-4xl font-bold text-center py-8 text-white"
@@ -19,7 +21,11 @@ const Education = () => {
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work max-sm:w-[85%] max-sm:ml-14"
-          contentStyle={{ background: "chocolate", color: "#fff", marginLeft:"5px" }}
+          contentStyle={{
+            background: "chocolate",
+            color: "#fff",
+            marginLeft: "5px",
+          }}
           date="2022 - 2026"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={<GiBookAura />}
@@ -35,7 +41,11 @@ const Education = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "blue", color: "#fff",marginRight:"5px" }}
+          contentStyle={{
+            background: "blue",
+            color: "#fff",
+            marginRight: "5px",
+          }}
           date="2020 - 2022"
           iconStyle={{ background: "#bbcde6", color: "#434d6c" }}
           icon={<GoBook />}
@@ -52,7 +62,11 @@ const Education = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work max-sm:w-[85%] max-sm:ml-14"
-          contentStyle={{ background: "green", color: "#fff",marginLeft:"5px" }}
+          contentStyle={{
+            background: "green",
+            color: "#fff",
+            marginLeft: "5px",
+          }}
           date="2019-2020"
           iconStyle={{ background: "#87be6f", color: "#434d6c" }}
           icon={<GoBook />}

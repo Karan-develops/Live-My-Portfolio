@@ -1,4 +1,3 @@
-import React from "react";
 import js from "../images/lang/js.png";
 import html from "../images/lang/html.png";
 import css from "../images/lang/css.png";
@@ -18,12 +17,14 @@ import cpp from "../images/lang/cpp.png";
 import redis from "../images/lang/redis.png";
 import typeS from "../images/lang/typeS.png";
 import zustand from "../images/lang/zustand.jpg";
-import mongoose from "../images/lang/mongoose.png"
-import next from "../images/lang/next.jpg"
-import sanity from "../images/lang/sanity.png"
-import auth from "../images/lang/authjs.jpg"
+import convex from "../images/lang/convex.jpg";
+import mongoose from "../images/lang/mongoose.png";
+import next from "../images/lang/next.jpg";
+import sanity from "../images/lang/sanity.png";
+import auth from "../images/lang/authjs.jpg";
+import clerk from "../images/lang/clerk.png"
 import { FaDesktop } from "react-icons/fa";
-import '../index.css';
+import "../index.css";
 
 const Skills = () => {
   return (
@@ -128,8 +129,25 @@ const Skills = () => {
           <h1 className="skill_t1">Sanity</h1>
         </div>
         <div className="skill_card">
-          <img className="w-[55px] h-[50px] mt-2 rounded-full object-cover" src={auth} />
+          <img
+            className="w-[55px] h-[50px] mt-2 rounded-full object-cover"
+            src={auth}
+          />
           <h1 className="skill_t1">Auth JS</h1>
+        </div>
+        <div className="skill_card">
+          <img
+            className="w-[55px] h-[50px] mt-2 rounded-full object-cover"
+            src={clerk}
+          />
+          <h1 className="skill_t1">Clerk</h1>
+        </div>
+        <div className="skill_card">
+          <img
+            className="w-[55px] h-[50px] mt-2 rounded-full object-cover"
+            src={convex}
+          />
+          <h1 className="skill_t1">Convex</h1>
         </div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import avatar from "../images/avatar.png";
 import { List, ListItem, ListIcon } from "@chakra-ui/react";
 import { SiLeetcode, SiSemanticscholar } from "react-icons/si";
@@ -64,7 +63,7 @@ const About = () => {
                   className="border w-[100px] flex items-center rounded-xl px-2 gap-1 cursor-pointer text-white p-1"
                 >
                   <SiLeetcode />
-                  <p className="leetcodeCustom" >Leetcode</p>
+                  <p className="leetcodeCustom">Leetcode</p>
                 </a>
               </div>
               <div>
