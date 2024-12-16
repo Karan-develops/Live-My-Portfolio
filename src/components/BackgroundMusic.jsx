@@ -28,7 +28,7 @@ const BackgroundMusic = () => {
 
   return (
     <div className="ml-5 -mr-5 mt-[10px] z-50">
-      <audio ref={audioRef} autoPlay loop>
+      <audio ref={audioRef} loop>
         <source src="src/images/music/bgM.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
