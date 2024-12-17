@@ -16,14 +16,17 @@ const BackgroundMusic = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [showTooltip]);
 
-  const togglePlay = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
+  const togglePlay = async () => {
+    try {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        await audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    } catch (error) {
+      console.error("Error with play/pause:", error);
     }
-    setIsPlaying(!isPlaying);
-    setShowTooltip(false);
   };
 
   return (
