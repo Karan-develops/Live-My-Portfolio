@@ -22,25 +22,28 @@ const BackgroundMusic = () => {
 
   const togglePlay = () => {
     if (!audioRef.current) return;
-  
+
     if (isPlaying) {
-      audioRef.current.pause();
       setIsPlaying(false);
+      try {
+        audioRef.current.pause();
+      } catch (error) {
+        console.error("Error occurred while trying to pause audio:", error);
+        setIsPlaying(true);
+      }
     } else {
+      setIsPlaying(true);
       const playPromise = audioRef.current.play();
 
       if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            setIsPlaying(true);
-          })
-          .catch((error) => {
-            console.error("Error occurred while trying to play audio:", error);
-          });
+        playPromise.catch((error) => {
+          console.error("Error occurred while trying to play audio:", error);
+          setIsPlaying(false);
+        });
       }
     }
     setShowTooltip(false);
-  };  
+  };
 
   return (
     <div className="ml-5 -mr-5 mt-[10px] z-50">
