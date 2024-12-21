@@ -20,7 +20,17 @@ const BackgroundMusic = () => {
     if (isPlaying) {
       audioRef.current.pause();
     } else {
-      audioRef.current.play();
+      const playPromise = audioRef.current.play();
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // console.log("Audio is playing successfully.");
+          })
+          .catch((error) => {
+            console.error("Error occurred while trying to play audio:", error);
+          });
+      }
     }
     setIsPlaying(!isPlaying);
     setShowTooltip(false);
