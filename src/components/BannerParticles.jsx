@@ -32,11 +32,13 @@ const BannerParticles = () => {
                 sequence={[
                   "Mern Stack",
                   1000,
-                  "Backend Development",
+                  "Backend Dev.",
                   1000,
                   "Problem Solving",
                   1000,
                   "Web Development",
+                  1000,
+                  "BlockChain",
                   1000,
                 ]}
                 wrapper="span"

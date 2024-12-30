@@ -1,7 +1,6 @@
 import About from "./components/About";
 import Particles from "./components/BannerParticles";
 import Contact from "./components/Contact";
-import CopyRight from "./components/CopyRight";
 import Education from "./components/Education";
 import Project from "./components/Project";
 import Skills from "./components/Skills";
@@ -14,7 +13,9 @@ import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { ArrowUp } from "lucide-react";
 import ProjectTogether from "./components/ProjectTogether";
-import Marquee from "./components/Marquee";
+import Marquee from "./components/Marquee"
+import Footer from "./components/Footer";
+import Services from "./components/Services";
 
 function App() {
   function goTop() {
@@ -38,18 +39,19 @@ function App() {
         <Marquee/>
         <Contact />
         <Project />
+        <Services/>
         <div className="pt-20">
         <ProjectTogether/>
         </div>
         <Education />
-        <CopyRight />
       </div>
       <div
         onClick={goTop}
-        className="fixed cursor-pointer  w-[50px] h-[50px] rounded-full bottom-10 right-10  bg-[#0fa968] text-white flex justify-center items-center"
+        className="fixed cursor-pointer  w-[50px] h-[50px] rounded-full bottom-10 right-10 bg-[#0fa968] text-white flex justify-center items-center z-20"
       >
         <ArrowUp />
       </div>
+        <Footer />
       <Toaster position="top-center" reverseOrder={false} />
     </div>
   );

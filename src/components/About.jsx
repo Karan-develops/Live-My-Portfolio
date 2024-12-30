@@ -2,9 +2,11 @@ import avatar from "../images/avatar.png";
 import { List, ListItem, ListIcon } from "@chakra-ui/react";
 import { SiLeetcode, SiSemanticscholar } from "react-icons/si";
 import { BiCodeAlt } from "react-icons/bi";
-import { AiFillHome, AiFillGithub } from "react-icons/ai";
+import { AiFillHome, AiFillGithub  } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
 import { ArrowRightCircle } from "lucide-react";
+import { FiCpu } from "react-icons/fi";
+import { IoCloudDoneOutline } from "react-icons/io5";
 
 const About = () => {
   return (
@@ -27,7 +29,7 @@ const About = () => {
           </h1>
           <List className="" spacing={3}>
             <ListItem className="text-white sm:text-lg text-sm">
-              <ListIcon className="text-2xl" as={BiCodeAlt} color="red.500" />
+              <ListIcon className="text-2xl" as={IoCloudDoneOutline} color="blue.400" />
               Passionate Web Developer
             </ListItem>
             <ListItem className="text-white sm:text-lg text-sm">
@@ -37,10 +39,10 @@ const About = () => {
             <ListItem className="text-white sm:text-lg text-sm">
               <ListIcon
                 className="text-2xl"
-                as={SiSemanticscholar}
+                as={FiCpu}
                 color="yellow.500"
               />
-              LeetCode Enthusiast
+              BlockChain Enthusiast
             </ListItem>
             <ListItem className="text-white sm:text-lg text-sm">
               <ListIcon
