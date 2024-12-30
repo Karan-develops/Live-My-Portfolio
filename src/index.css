@@ -34,74 +34,79 @@ body {
   background-color: #0d0d0d !important;
 }
 
-@layer utilities{
-
-  /*  project cards  */ 
-  .project_card_container{
-    @apply flex bg-[rgba(0,0,0,0.9)] sm:p-10 p-5 gap-7 flex-wrap justify-center rounded-xl
+@layer utilities {
+  /*  project cards  */
+  .project_card_container {
+    @apply flex bg-[rgba(0,0,0,0.9)] sm:p-10 p-5 gap-7 flex-wrap justify-center rounded-xl;
   }
-  .project_card_div{
-    @apply lg:w-[25%] lg:h-[360px] sm:w-[50%] md:w-[40%] w-[80%] bg-gray-900  projectShadow sm:h-[100%] rounded-lg p-2
+  .project_card_div {
+    @apply lg:w-[25%] lg:h-[360px] sm:w-[50%] md:w-[40%] w-[80%] bg-gray-900  projectShadow sm:h-[100%] rounded-lg p-2;
   }
-  .project_card_img{
-    @apply w-[100%] sm:h-[200px] h-[150px] rounded-2xl object-cover
+  .project_card_img {
+    @apply w-[100%] sm:h-[200px] h-[150px] rounded-2xl object-cover;
   }
-  .project_card_textContainer{
-    @apply bg-[#2d434c] p-5  h-[100%] lg:h-[120px] mt-4 rounded-lg
+  .project_card_textContainer {
+    @apply bg-[#2d434c] p-5  h-[100%] lg:h-[120px] mt-4 rounded-lg;
   }
-  .project_card_heading{
-    @apply flex font-bold text-white mt-1 font-serif
+  .project_card_heading {
+    @apply flex font-bold text-white mt-1 font-serif;
   }
-  .project_card_deployed{
-    @apply text-emerald-400 ml-12
+  .project_card_deployed {
+    @apply text-emerald-400 ml-12;
   }
-  .project_card_links{
-    @apply flex gap-2 justify-between flex-wrap
+  .project_card_links {
+    @apply flex gap-2 justify-between flex-wrap;
   }
-  .project_card_liveBtn{
-    @apply p-[8px] mt-[7px] bg-green-600 text-white outline-none
-  }
-  .project_card_gitHubBtnP{
-    @apply flex justify-center items-center ml-1
-  }
-  .project_card_gitIcon{
-    @apply relative text-gray-300 hover:text-emerald-400 transition duration-300 ease-in-out text-lg hover:cursor-pointer ml-5 mt-3
+  .project_card_liveBtn {
+    @apply p-[8px] mt-[7px] bg-green-600 text-white outline-none;
   }
 
   /* Project Together */
-  .pT_container{
-    @apply bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg p-6 text-white w-96 mx-auto shadow-lg text-center hover:shadow-lg hover:shadow-white transition-all duration-700 
+  .pT_container {
+    @apply bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg p-6 text-white w-96 mx-auto shadow-lg text-center hover:shadow-lg hover:shadow-white transition-all duration-700;
   }
-  .pT_btn{
-    @apply bg-gray-800 text-white py-3 px-6 rounded-lg border-none cursor-pointer text-lg flex items-center justify-center ml-8
+  .pT_btn {
+    @apply bg-gray-800 text-white py-3 px-6 rounded-lg border-none cursor-pointer text-lg flex items-center justify-center ml-8;
   }
 
   /*  Navbar  */
-  .nav_container{
-    @apply flex justify-between items-center p-2 text-white max-w-[1200px] w-[100%] ml-auto mr-12
+  .nav_container {
+    @apply flex justify-between items-center p-2 text-white max-w-[1200px] w-[100%] ml-auto mr-12;
   }
 
   /* skills */
-  .skill_heading{
-    @apply font-bold text-gray-200 text-4xl text-center flex justify-center items-center gap-3
+  .skill_heading {
+    @apply font-bold text-gray-200 text-4xl text-center flex justify-center items-center gap-3;
   }
-  .skill_container{
-    @apply flex justify-center mt-7 sm:w-[70%] w-full mx-auto  gap-4 flex-wrap  bg-[rgba(0,0,0,0.9)] p-10 rounded-2xl
+  .skill_container {
+    @apply flex justify-center mt-7 sm:w-[70%] w-full mx-auto  gap-4 flex-wrap  bg-[rgba(0,0,0,0.9)] p-10 rounded-2xl;
   }
-  .skill_card{
-    @apply customSkillShadow border customShadow px-4 pb-1 flex flex-col items-center rounded-xl
+  .skill_card {
+    @apply customSkillShadow border customShadow px-4 pb-1 flex flex-col items-center rounded-xl;
   }
-  .skill_name{
-    @apply text-white font-bold mt-1
+  .skill_img {
+    @apply w-[60px] h-[60px];
   }
-  .skill_img{
-    @apply w-[60px] h-[60px]
+  .skill_c1 {
+    @apply w-[55px] h-[50px] mt-2 rounded-full object-cover;
   }
-  .skill_c_shadow{
-    @apply customSkillShadow border customShadow px-4  flex flex-col items-center justify-center rounded-xl
+  .skill_c2 {
+    @apply w-[55px] h-[50px] mt-2;
   }
-  .skill_t1{
-    @apply text-white font-bold mt-2
+  .skill_c3 {
+    @apply w-[60px] h-[50px] mt-2;
+  }
+  .skill_c4 {
+    @apply w-[40px] h-[40px];
+  }
+  .skill_c5 {
+    @apply w-[50px] h-[50px];
+  }
+  .skill_c_shadow {
+    @apply customSkillShadow border customShadow px-4  flex flex-col items-center justify-center rounded-xl;
+  }
+  .skill_t1 {
+    @apply text-white font-bold mt-2;
   }
 }
 
@@ -222,14 +227,6 @@ button:focus-visible {
 
 .formShadow {
   box-shadow: 1px -1px 16px -3px rgba(18, 188, 235, 0.6);
-}
-.projectShadow {
-  box-shadow: 1px -1px 6px -3px rgba(18, 188, 235, 0.6);
-}
-
-.projectShadow {
-  position: relative;
-  overflow: hidden;
 }
 
 .project-description {

@@ -49,7 +49,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-20 flex w-full justify-center align-middle items-center"
+      className="py-24 flex w-full justify-center align-middle items-center"
     >
       <div className="md:max-w-7xl flex justify-center align-middle items-center gap-8 flex-col">
         {/* heading */}

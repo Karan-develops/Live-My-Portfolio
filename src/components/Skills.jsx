@@ -1,3 +1,5 @@
+import { Blocks } from "lucide-react";
+import "../index.css";
 import js from "../images/lang/js.png";
 import html from "../images/lang/html.png";
 import css from "../images/lang/css.png";
@@ -22,9 +24,50 @@ import mongoose from "../images/lang/mongoose.png";
 import next from "../images/lang/next.jpg";
 import sanity from "../images/lang/sanity.png";
 import auth from "../images/lang/authjs.jpg";
-import clerk from "../images/lang/clerk.png"
-import { FaDesktop } from "react-icons/fa";
-import "../index.css";
+import clerk from "../images/lang/clerk.png";
+
+const skillsData = [
+  { name: "HTML", img: html, imgClass: "skill_img mt-1" },
+  { name: "CSS", img: css, imgClass: "skill_img mt-1" },
+  { name: "JAVASCRIPT", img: js, imgClass: "skill_img" },
+  { name: "REACT", img: react, imgClass: "skill_img" },
+  { name: "NODE JS", img: node, imgClass: "skill_img" },
+  {
+    name: "EXPRESS JS",
+    img: express,
+    imgClass: "skill_c4",
+    containerClass: "skill_c_shadow",
+  },
+  {
+    name: "MONGO DB",
+    img: mg,
+    imgClass: "w-[100px] h-[40px]",
+    containerClass: "skill_c_shadow",
+  },
+  {
+    name: "REDUX",
+    img: redux,
+    imgClass: "skill_c5",
+    containerClass: "skill_c_shadow",
+  },
+  { name: "JAVA", img: java, imgClass: "skill_img" },
+  { name: "C", img: c, imgClass: "skill_img mt-1" },
+  { name: "GIT", img: git, imgClass: "w-[50px] h-[47px] mt-2" },
+  { name: "C++", img: cpp, imgClass: "skill_c3 invert" },
+  { name: "GITHUB", img: github, imgClass: "skill_c4 mt-4 rounded-full" },
+  { name: "SQL", img: sql, imgClass: "skill_c3" },
+  { name: "Tailwind", img: ts, imgClass: "skill_c3" },
+  { name: "Mongoose", img: mongoose, imgClass: "skill_c5 mt-2 rounded-full" },
+  { name: "BootStrap", img: bs, imgClass: "skill_c3" },
+  { name: "Redis", img: redis, imgClass: "skill_c3" },
+  { name: "Zustand", img: zustand, imgClass: "skill_c3 rounded-full" },
+  { name: "TypeScript", img: typeS, imgClass: "skill_c2" },
+  { name: "Next JS", img: next, imgClass: "skill_c2" },
+  { name: "Sanity", img: sanity, imgClass: "skill_c2 rounded-full" },
+  { name: "Auth JS", img: auth, imgClass: "skill_c1" },
+  { name: "Clerk", img: clerk, imgClass: "skill_c1" },
+  { name: "Convex", img: convex, imgClass: "skill_c1" },
+];
 
 const Skills = () => {
   return (
@@ -34,121 +77,19 @@ const Skills = () => {
       className="lg:h-[100vh] h-full w-[100%] p-10"
     >
       <h1 className="skill_heading">
-        <span>
-          <FaDesktop className="text-3xl text-[#817ffa]" />{" "}
-        </span>{" "}
         Skills
+        <Blocks className="text-emerald-500 size-8" />
       </h1>
       <div className="skill_container">
-        <div className="skill_card">
-          <img className="w-[60px] h-[60px] mt-1" src={html} />
-          <h1 className="skill_name">HTML</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[60px] mt-1" src={css} />
-          <h1 className="skill_name">CSS</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[60px]" src={js} />
-          <h1 className="skill_t1">JAVASCRIPT</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[60px]" src={react} />
-          <h1 className="skill_t1">REACT</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[60px]" src={node} />
-          <h1 className="skill_t1">NODE JS</h1>
-        </div>
-        <div className="skill_c_shadow">
-          <img className="w-[40px] h-[40px]" src={express} />
-          <h1 className="skill_t1">EXPRESS JS</h1>
-        </div>
-        <div className="skill_c_shadow">
-          <img className="w-[100px] h-[40px]" src={mg} />
-          <h1 className="skill_t1">MONGO DB</h1>
-        </div>
-        <div className="skill_c_shadow">
-          <img className="w-[50px] h-[50px]" src={redux} />
-          <h1 className="skill_t1">REDUX</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[60px]" src={java} />
-          <h1 className="skill_t1">JAVA</h1>
-        </div>
-        <div className="customSkillShadow border customShadow px-4 py-2 pb-1 flex flex-col justify-center items-center rounded-xl">
-          <img className="w-[40px] h-[40px]" src={c} />
-          <h1 className="skill_t1">C</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[50px] h-[47px] mt-2" src={git} />
-          <h1 className="skill_t1">GIT</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[50px] mt-2 invert" src={cpp} />
-          <h1 className="skill_t1">C++</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[40px] h-[40px] mt-4 rounded-full" src={github} />
-          <h1 className="skill_t1">GITHUB</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[50px] mt-2" src={sql} />
-          <h1 className="skill_t1">SQL</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[50px] mt-2" src={ts} />
-          <h1 className="skill_t1">Tailwind</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[50px] h-[50px] mt-2 rounded-full" src={mongoose} />
-          <h1 className="skill_t1">Mongoose</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[50px] mt-2" src={bs} />
-          <h1 className="skill_t1">BootStrap</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[50px] mt-2" src={redis} />
-          <h1 className="skill_t1">Redis</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[60px] h-[50px] mt-2 rounded-full" src={zustand} />
-          <h1 className="skill_t1">Zustand</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[55px] h-[50px] mt-2" src={typeS} />
-          <h1 className="skill_t1">TypeScript</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[55px] h-[50px] mt-2" src={next} />
-          <h1 className="skill_t1">Next JS</h1>
-        </div>
-        <div className="skill_card">
-          <img className="w-[55px] h-[50px] mt-2 rounded-full" src={sanity} />
-          <h1 className="skill_t1">Sanity</h1>
-        </div>
-        <div className="skill_card">
-          <img
-            className="w-[55px] h-[50px] mt-2 rounded-full object-cover"
-            src={auth}
-          />
-          <h1 className="skill_t1">Auth JS</h1>
-        </div>
-        <div className="skill_card">
-          <img
-            className="w-[55px] h-[50px] mt-2 rounded-full object-cover"
-            src={clerk}
-          />
-          <h1 className="skill_t1">Clerk</h1>
-        </div>
-        <div className="skill_card">
-          <img
-            className="w-[55px] h-[50px] mt-2 rounded-full object-cover"
-            src={convex}
-          />
-          <h1 className="skill_t1">Convex</h1>
-        </div>
+        {skillsData.map((skill, index) => (
+          <div
+            key={index}
+            className={skill.containerClass || "skill_card customSkillShadow"}
+          >
+            <img className={skill.imgClass} src={skill.img} alt={skill.name} />
+            <h1 className="skill_t1">{skill.name}</h1>
+          </div>
+        ))}
       </div>
     </div>
   );

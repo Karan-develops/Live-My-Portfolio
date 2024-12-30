@@ -6,8 +6,17 @@ import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const links = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "project", label: "Projects" },
+    { id: "education", label: "Education" },
+    { id: "skills", label: "Skills" },
+    { id: "services", label: "Services" },
+    { id: "contact", label: "Contact" },
+  ];
 
   const menuItems = [
     { name: "About Me", href: "#about" },
@@ -31,7 +40,6 @@ const Navbar = () => {
 
   function handleLinkClick(sectionId) {
     const section = document.getElementById(sectionId);
-
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       setActiveLink(sectionId);
@@ -50,69 +58,21 @@ const Navbar = () => {
 
         <div className=" lg:flex hidden cursor-pointer">
           <ul className="flex gap-3 list">
-            <li
-              className={
-                activeLink === "home" ? "bg-purple-700 rounded-xl" : ""
-              }
-            >
-              <a href="#home" onClick={() => handleLinkClick("home")}>
-                Home
-              </a>
-            </li>
-            <li
-              className={
-                activeLink === "about" ? "bg-purple-700 rounded-xl" : ""
-              }
-            >
-              <a href="#about" onClick={() => handleLinkClick("about")}>
-                About
-              </a>
-            </li>
-            <li
-              className={
-                activeLink === "project" ? "bg-purple-700 rounded-xl" : ""
-              }
-            >
-              <a href="#project" onClick={() => handleLinkClick("project")}>
-                Projects
-              </a>
-            </li>
-            <li
-              className={
-                activeLink === "education" ? "bg-purple-700 rounded-xl" : ""
-              }
-            >
-              <a href="#education" onClick={() => handleLinkClick("education")}>
-                Education
-              </a>
-            </li>
-            <li
-              className={
-                activeLink === "skills" ? "bg-purple-700 rounded-xl" : ""
-              }
-            >
-              <a href="#skills" onClick={() => handleLinkClick("skills")}>
-                Skills
-              </a>
-            </li>
-            <li
-              className={
-                activeLink === "services" ? "bg-purple-700 rounded-xl" : ""
-              }
-            >
-              <a href="#services" onClick={() => handleLinkClick("services")}>
-                Services
-              </a>
-            </li>
-            <li
-              className={
-                activeLink === "contact" ? "bg-purple-700 rounded-xl" : ""
-              }
-            >
-              <a href="#contact" onClick={() => handleLinkClick("contact")}>
-                Contact
-              </a>
-            </li>
+            {links.map((link) => (
+              <li
+                key={link.id}
+                className={
+                  activeLink === link.id ? "bg-purple-700 rounded-xl" : ""
+                }
+              >
+                <a
+                  href={`#${link.id}`}
+                  onClick={() => handleLinkClick(link.id)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
           <>
             <a
@@ -134,7 +94,7 @@ const Navbar = () => {
         </div>
       </div>
       <motion.div
-        className="lg:hidden z-auto cursor-pointer w-5 ml-auto mr-2"
+        className="lg:hidden z-50 cursor-pointer w-5 ml-auto mr-2"
         onClick={toggleMenu}
         animate={isOpen ? "open" : "closed"}
       >
@@ -168,7 +128,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-black z-40 flex flex-col items-center justify-center"
+            className="inset-0 flex flex-col items-center justify-center"
             initial={{ opacity: 0, y: "-100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}

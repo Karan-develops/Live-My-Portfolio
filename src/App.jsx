@@ -13,7 +13,7 @@ import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { ArrowUp } from "lucide-react";
 import ProjectTogether from "./components/ProjectTogether";
-import Marquee from "./components/Marquee"
+import Marquee from "./components/Marquee";
 import Footer from "./components/Footer";
 import Services from "./components/Services";
 
@@ -36,12 +36,12 @@ function App() {
       <div className="center">
         <About />
         <Skills />
-        <Marquee/>
+        <Marquee />
         <Contact />
         <Project />
-        <Services/>
+        <Services />
         <div className="pt-20">
-        <ProjectTogether/>
+          <ProjectTogether />
         </div>
         <Education />
       </div>
@@ -51,7 +51,7 @@ function App() {
       >
         <ArrowUp />
       </div>
-        <Footer />
+      <Footer />
       <Toaster position="top-center" reverseOrder={false} />
     </div>
   );

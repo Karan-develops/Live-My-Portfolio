@@ -10,6 +10,7 @@ const TogglingText = () => {
     "Lifelong Learner",
     "Tech Enthusiast",
     "Loves Music",
+    "BlockChain",
   ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);

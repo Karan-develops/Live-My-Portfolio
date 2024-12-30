@@ -8,7 +8,7 @@ import chrome from "../images/tools/chrome.jpg";
 import github from "../images/lang/gitHub.jpg";
 import git from "../images/lang/git.png";
 import figma from "../images/tools/figma.png";
-import { Wrench } from "lucide-react";
+import { Cpu } from "lucide-react";
 import npm from "../images/tools/npm.png";
 import vercel from "../images/tools/vercel.png";
 import docker from "../images/tools/docker.png";
@@ -43,10 +43,8 @@ const Marquee = () => {
   return (
     <div className="overflow-hidden mt-28 z-auto">
       <h1 className="skill_heading">
-        <span>
-          <Wrench className="text-3xl text-[#817ffa]" />{" "}
-        </span>{" "}
         Tools I Use
+        <Cpu className="text-3xl text-emerald-500" />
       </h1>
       <div className="flex w-[200%] animate-marquee mt-20 mb-28">
         {[...tools, ...tools].map((tool, index) => (

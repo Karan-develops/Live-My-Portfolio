@@ -5,6 +5,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { GiBookAura } from "react-icons/gi";
 import { GoBook } from "react-icons/go";
+import { GraduationCap } from "lucide-react";
 
 const Education = () => {
   return (
@@ -14,9 +15,10 @@ const Education = () => {
     >
       <h1
         data-aos="zoom-out-left"
-        className="text-4xl font-bold text-center py-8 text-white"
+        className="flex text-4xl justify-center font-bold py-8 text-white"
       >
         Education
+        <GraduationCap className="size-10 ml-1 text-emerald-500" />
       </h1>
       <VerticalTimeline>
         <VerticalTimelineElement
