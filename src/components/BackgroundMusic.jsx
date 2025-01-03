@@ -20,28 +20,34 @@ const BackgroundMusic = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [showTooltip]);
 
-  const togglePlay = async () => {
+  const togglePlay = () => {
     if (!audioRef.current) return;
-    try {
-      if (isPlaying) {
+
+    if (isPlaying) {
+      setIsPlaying(false);
+      try {
         audioRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        const playPromise = audioRef.current.play();
-        if (playPromise !== undefined) {
-          await playPromise;
-          setIsPlaying(true);
-        }
+      } catch (error) {
+        console.error("Error occurred while trying to pause audio:", error);
+        setIsPlaying(true);
       }
-    } catch (error) {
-      console.error("Error occurred while toggling playback:", error);
+    } else {
+      setIsPlaying(true);
+      const playPromise = audioRef.current.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.error("Error occurred while trying to play audio:", error);
+          setIsPlaying(false);
+        });
+      }
     }
     setShowTooltip(false);
   };
 
   return (
     <div className="ml-5 -mr-5 mt-[10px] z-50">
-      <audio ref={audioRef} preload="auto" loop>
+      <audio ref={audioRef} preload="true" loop>
         <source src="src/images/music/bgM.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
