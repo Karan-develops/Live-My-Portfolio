@@ -7,23 +7,27 @@ import HeroBtn from "./ui/HeroBtn";
 const BannerParticles = () => {
   return (
     <div id="home" className="relative h-screen">
-      <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-10 ">
         <TogglingText />
       </div>
-      <div className="banner h-full z-10 relative">
+      <div className="banner h-full z-10 relative ">
         {" "}
-        <div className="bannerCustom flex items-center ml-16 sm:flex-row flex-col md:justify-around h-full">
-          <div className="lg:flex-0.7 sm:w-[60%] w-full sm:p-10">
-            <h1 className="sm:text-3xl text-lg font-bold">Hi There,</h1>
-            <h1 className="md:text-4xl text-2xl">
-              I'm{" "}
-              <span className="text-[#e3662c] font-extrabold">
-                Karan Aggarwal
-              </span>
-            </h1>
-
-            <div className="flex items-center w-full gap-2">
-              <h1 className="sm:text-2xl text-xl">I am into </h1>
+        <div className="bannerCustom flex items-center sm:flex-row gap-10 flex-col h-full">
+          <div className="lg:flex-0.7 sm:w-[60%] w-full sm:p-10 mt-9 ">
+            <div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className={`max-w-4xl  font-semibold text-center flex flex-col justify-center align-middle items-center mr-1 `}
+            >
+              <h1 className="text-[#6c96be] text-5xl md:text-8xl leading-tight tracking-tight mb-6">
+                Hi! I am Karan,
+                <span className="text-emerald-500"> Developer </span>
+                Based in India
+              </h1>
+            </div>
+            <div className="flex items-center w-fit gap-2 ml-[69px]">
+              <h1 className=" sm:text-3xl text-xl mt-6">I am into </h1>
               <TypeAnimation
                 sequence={[
                   "Mern Stack",
@@ -33,8 +37,6 @@ const BannerParticles = () => {
                   "Problem Solving",
                   1000,
                   "Web Development",
-                  1000,
-                  "BlockChain",
                   1000,
                 ]}
                 wrapper="span"
@@ -48,13 +50,19 @@ const BannerParticles = () => {
                 className="typing-text-large"
               />
             </div>
-            <HeroLinks />
-            <HeroBtn />
+            <div className="flex justify-end lg:mr-6 mr-24">
+              <HeroLinks />
+            </div>
+            <div className="flex justify-end -mt-3 lg:mr-10 mr-28">
+              <HeroBtn />
+            </div>
           </div>
-          <img
-            src={heroImg}
-            className="bannerImgCus h-[38vh] animate-float mr-12"
-          />
+          <div className="ml-28 ">
+            <img
+              src={heroImg}
+              className="bannerImgCus h-[38vh] animate-float mr-12"
+            />
+          </div>
         </div>
       </div>
     </div>

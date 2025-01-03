@@ -76,7 +76,7 @@ const projectsData = [
     title: "Momentz - Full Stack Social App",
     icon: <MoonStar className="text-amber-300 mr-1 -mt-1 size-7" />,
     deployedStatus: "Deployed ✅",
-    liveUrl: "https://mometz.vercel.app/",
+    liveUrl: "https://momentz-tawny.vercel.app/",
     githubUrl: "https://github.com/Karan-develops/Mometz-FullStack-SocialMedia-App",
     description: [
       "A Modern Full Stack Social Media App with features like Post, Like, Comment, Follow, Unfollow, Profile, and more. Powered By Next.js.",
