@@ -5,11 +5,13 @@ import ecommerce from "../images/projects/ec.png";
 import sumz from "../images/projects/Sumz.png";
 import pitch from "../images/projects/ps.png";
 import codeEd from "../images/projects/codeEd.png";
+import momentz from "../images/projects/momentz.png";
 import {
   BugPlay,
   GithubIcon,
   LucideChartNoAxesCombined,
   MessageCircleCodeIcon,
+  MoonStar,
   Sigma,
   Waypoints,
 } from "lucide-react";
@@ -70,6 +72,19 @@ const projectsData = [
   },
   {
     id: 4,
+    image: momentz,
+    title: "Momentz - Full Stack Social App",
+    icon: <MoonStar className="text-amber-300 mr-1 -mt-1 size-7" />,
+    deployedStatus: "Deployed ✅",
+    liveUrl: "https://mometz.vercel.app/",
+    githubUrl: "https://github.com/Karan-develops/Mometz-FullStack-SocialMedia-App",
+    description: [
+      "A Modern Full Stack Social Media App with features like Post, Like, Comment, Follow, Unfollow, Profile, and more. Powered By Next.js.",
+    ],
+    tech: "Technologies Used:- Next.js, TailwindCSS, ShadCN, TypeScript, prisma, postgresql, uploadthing, vercel.",
+  },
+  {
+    id: 5,
     image: chatApp,
     title: "Real-Time Chat App (Socket - IO)",
     icon: <MessageCircleCodeIcon className="text-cyan-400 mr-1 -mt-1 size-7" />,
@@ -81,7 +96,7 @@ const projectsData = [
     tech: "Technologies Used:- Node JS, Mongo DB, Express,JWT,Socket.io",
   },
   {
-    id: 5,
+    id: 6,
     image: sumz,
     title: "Sumz - AI - Using RapidApi",
     icon: <Sigma className="text-orange-500" />,

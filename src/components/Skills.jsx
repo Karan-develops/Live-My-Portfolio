@@ -25,6 +25,7 @@ import next from "../images/lang/next.jpg";
 import sanity from "../images/lang/sanity.png";
 import auth from "../images/lang/authjs.jpg";
 import clerk from "../images/lang/clerk.png";
+import prisma from "../images/lang/prisma.jpg";
 
 const skillsData = [
   { name: "HTML", img: html, imgClass: "skill_img mt-1" },
@@ -67,6 +68,7 @@ const skillsData = [
   { name: "Auth JS", img: auth, imgClass: "skill_c1" },
   { name: "Clerk", img: clerk, imgClass: "skill_c1" },
   { name: "Convex", img: convex, imgClass: "skill_c1" },
+  { name: "Prisma", img: prisma, imgClass: "skill_c1" },
 ];
 
 const Skills = () => {
