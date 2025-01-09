@@ -77,7 +77,7 @@ const Contact = () => {
                 name="message"
                 cols="25"
                 rows="5"
-                placeholder="Write Your Message"
+                placeholder="Hey! I'm always reachable through email, but if you're as lazy as me 😄, just fill this form & submit it."
               ></Textarea>
             </div>
             <div>

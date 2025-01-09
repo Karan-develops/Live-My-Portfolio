@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Code, GithubIcon, Orbit, Mail } from "lucide-react";
 import BackgroundMusic from "./BackgroundMusic";
 import { motion, AnimatePresence } from "framer-motion";
+import {WebsiteLoader} from "../components/ui/Loader";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("home");
+  const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -45,13 +47,20 @@ const Navbar = () => {
       setActiveLink(sectionId);
     }
   }
+
+  useEffect(() => {
+    setMounted(true)
+  }, [mounted])
+  
+
   return (
     <div className="customShadow z-[1000] sticky top-0 left-0 bg-[#0d0d0d]">
+      <WebsiteLoader mounted={mounted}/>
       <div className="nav_container">
-        <div className="navName flex gap-3 items-center ml-[-25vh]">
-          <Orbit className="text-emerald-500  text-5xl" />
+        <div className="navName flex gap-3 items-center ml-[-5vh] lg:ml-[-25vh]">
+          <Orbit className="text-emerald-500 text-5xl" />
           <h1 className=" text-emerald-500 text-[28px] font-bold">
-            Karan <span className="text-[#c9d3fc] ">Aggarwal</span>
+            Karan <span className="text-[#c9d3fc]">Aggarwal</span>
           </h1>
           <Code className="cA text-emerald-500  text-5xl" />
         </div>

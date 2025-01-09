@@ -47,7 +47,7 @@ function App() {
       </div>
       <div
         onClick={goTop}
-        className="fixed cursor-pointer  w-[50px] h-[50px] rounded-full bottom-10 right-10 bg-[#0fa968] text-white flex justify-center items-center z-20"
+        className="fixed cursor-pointer  w-[50px] h-[50px] rounded-full bottom-10 right-10 bg-[#0fa968] text-white flex justify-center items-center z-50"
       >
         <ArrowUp />
       </div>

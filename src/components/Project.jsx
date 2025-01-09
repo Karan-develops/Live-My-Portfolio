@@ -6,12 +6,14 @@ import sumz from "../images/projects/Sumz.png";
 import pitch from "../images/projects/ps.png";
 import codeEd from "../images/projects/codeEd.png";
 import momentz from "../images/projects/momentz.png";
+import newzly from "../images/projects/newzly.png"
 import {
   BugPlay,
   GithubIcon,
   LucideChartNoAxesCombined,
   MessageCircleCodeIcon,
   MoonStar,
+  Newspaper,
   Sigma,
   Waypoints,
 } from "lucide-react";
@@ -85,6 +87,19 @@ const projectsData = [
   },
   {
     id: 5,
+    image: newzly,
+    title: "Newzly - Daily Dose of news",
+    icon: <Newspaper className="text-gray-400 mr-1 -mt-1 size-6" />,
+    deployedStatus: "Deployed ✅",
+    liveUrl: "https://newzly-karan.vercel.app/",
+    githubUrl: "https://github.com/Karan-develops/Newzly",
+    description: [
+      "A news app having built on Next Js, having backend and frontend separate. It has cron-job enabled to fetch news and store it in database.",
+    ],
+    tech: "Technologies Used:- Next.js, TailwindCSS, TypeScript, node, express, render, mongoDB, vercel.",
+  },
+  {
+    id: 6,
     image: chatApp,
     title: "Real-Time Chat App (Socket - IO)",
     icon: <MessageCircleCodeIcon className="text-cyan-400 mr-1 -mt-1 size-7" />,
@@ -96,7 +111,7 @@ const projectsData = [
     tech: "Technologies Used:- Node JS, Mongo DB, Express,JWT,Socket.io",
   },
   {
-    id: 6,
+    id: 7,
     image: sumz,
     title: "Sumz - AI - Using RapidApi",
     icon: <Sigma className="text-orange-500" />,

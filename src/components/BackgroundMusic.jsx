@@ -1,12 +1,12 @@
+import React, { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 import { Music4 } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import bgM from "../images/music/bgM.mp3";
 
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showTooltip, setShowTooltip] = useState(true);
-
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const audioRef = useRef(null);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -17,40 +17,27 @@ const BackgroundMusic = () => {
     } else {
       window.removeEventListener("mousemove", handleMouseMove);
     }
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   }, [showTooltip]);
 
   const togglePlay = () => {
-    if (!audioRef.current) return;
-
-    if (isPlaying) {
-      setIsPlaying(false);
-      try {
-        audioRef.current.pause();
-      } catch (error) {
-        console.error("Error occurred while trying to pause audio:", error);
-        setIsPlaying(true);
-      }
-    } else {
-      setIsPlaying(true);
-      const playPromise = audioRef.current.play();
-
-      if (playPromise !== undefined) {
-        playPromise.catch((error) => {
-          console.error("Error occurred while trying to play audio:", error);
-          setIsPlaying(false);
-        });
-      }
-    }
+    setIsPlaying((prev) => !prev);
     setShowTooltip(false);
   };
 
   return (
     <div className="ml-5 -mr-5 mt-[10px] z-50">
-      <audio ref={audioRef} preload="true" loop>
-        <source src="src/images/music/bgM.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
+      <ReactPlayer
+        url={bgM}
+        playing={isPlaying}
+        loop={true}
+        volume={0.5}
+        width="0"
+        height="0"
+      />
       <button
         onClick={togglePlay}
         className={`size-5 flex items-center justify-center rounded-full transition-colors duration-300 ${
@@ -68,11 +55,7 @@ const BackgroundMusic = () => {
           cursor: "pointer",
         }}
       >
-        {isPlaying ? (
-          <Music4 className="w-6 h-6" />
-        ) : (
-          <Music4 className="w-6 h-6" />
-        )}
+        <Music4 className="w-6 h-6" />
       </button>
       {showTooltip && (
         <div

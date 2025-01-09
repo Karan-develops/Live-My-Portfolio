@@ -110,6 +110,57 @@ body {
   }
 }
 
+.cursor-light {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #c778dd 50%, #3a3f49 100%);
+  opacity: 0.1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  filter: blur(35px);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(0.7);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes scaleAndRound {
+  0%,
+  100% {
+    border-radius: 15%;
+  }
+
+  50% {
+    border-radius: 30%;
+  }
+}
+
+.boxes-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  animation: rotate 2s linear infinite;
+  gap: 1rem;
+}
+
+.box-rotating {
+  border-radius: 0.5rem;
+  animation: scaleAndRound 2s ease-in-out infinite;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -248,7 +299,6 @@ button:focus-visible {
 }
 
 #contact {
-  background: url("./images/star.png");
   background-size: cover;
   background: rgb(21, 21, 21);
   background-position: center center;

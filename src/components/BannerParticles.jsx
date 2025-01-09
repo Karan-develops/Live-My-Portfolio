@@ -57,7 +57,7 @@ const BannerParticles = () => {
               <HeroBtn />
             </div>
           </div>
-          <div className="ml-28 ">
+          <div className="ml-28">
             <img
               src={heroImg}
               className="bannerImgCus h-[38vh] animate-float mr-12"
