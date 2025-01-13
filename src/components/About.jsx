@@ -1,6 +1,6 @@
 import avatar from "../images/avatar.png";
 import { List, ListItem, ListIcon } from "@chakra-ui/react";
-import { SiLeetcode, SiSemanticscholar } from "react-icons/si";
+import { SiLeetcode } from "react-icons/si";
 import { BiCodeAlt } from "react-icons/bi";
 import { AiFillHome, AiFillGithub  } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";

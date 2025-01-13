@@ -6,8 +6,10 @@ import sumz from "../images/projects/Sumz.png";
 import pitch from "../images/projects/ps.png";
 import codeEd from "../images/projects/codeEd.png";
 import momentz from "../images/projects/momentz.png";
-import newzly from "../images/projects/newzly.png"
+import newzly from "../images/projects/newzly.png";
+import bookops from "../images/projects/bookops.png";
 import {
+  BookMarkedIcon,
   BugPlay,
   GithubIcon,
   LucideChartNoAxesCombined,
@@ -79,7 +81,8 @@ const projectsData = [
     icon: <MoonStar className="text-amber-300 mr-1 -mt-1 size-7" />,
     deployedStatus: "Deployed ✅",
     liveUrl: "https://momentz-tawny.vercel.app/",
-    githubUrl: "https://github.com/Karan-develops/Mometz-FullStack-SocialMedia-App",
+    githubUrl:
+      "https://github.com/Karan-develops/Mometz-FullStack-SocialMedia-App",
     description: [
       "A Modern Full Stack Social Media App with features like Post, Like, Comment, Follow, Unfollow, Profile, and more. Powered By Next.js.",
     ],
@@ -112,6 +115,18 @@ const projectsData = [
   },
   {
     id: 7,
+    image: bookops,
+    title: "Book-Ops Library Management System",
+    icon: <BookMarkedIcon className="text-purple-500 mr-1 -mt-1 size-7" />,
+    deployedStatus: "Deployed ✅",
+    liveUrl: "https://bookops-karan.vercel.app/",
+    githubUrl: "https://github.com/Karan-develops/Book-Ops",
+    description:
+      "Built with Next.js, TypeScript, and Postgres, the University Library Management System is a production-grade platform featuring a public-facing app and an admin interface. It offers advanced functionalities like seamless book borrowing with reminders and receipts, robust user management, automated workflows, and a modern, optimized tech stack for real-world scalability.",
+    tech: "Technologies Used:- Next JS, PostgreSQL, ImageKit, TS.",
+  },
+  {
+    id: 8,
     image: sumz,
     title: "Sumz - AI - Using RapidApi",
     icon: <Sigma className="text-orange-500" />,
