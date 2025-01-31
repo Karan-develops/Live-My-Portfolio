@@ -74,6 +74,22 @@ body {
     @apply flex justify-between items-center p-2 text-white max-w-[1200px] w-[100%] ml-auto mr-12;
   }
 
+  /* Marquee */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    display: flex;
+    animation: marquee 15s linear infinite;
+    width: max-content;
+  }
+
   /* skills */
   .skill_heading {
     @apply font-bold text-gray-200 text-4xl text-center flex justify-center items-center gap-3;

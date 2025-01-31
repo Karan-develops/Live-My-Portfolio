@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export function WebsiteLoader({ mounted }: { mounted: boolean }): JSX.Element {
+  const [delayedMounted, setDelayedMounted] = useState(false);
+
+  useEffect(() => {
+    if (mounted) {
+      const timer = setTimeout(() => setDelayedMounted(true), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [mounted]);
+
   const boxes: { color: string }[] = [
     { color: "bg-purple-500" },
     { color: "bg-orange-500" },
@@ -11,7 +20,7 @@ export function WebsiteLoader({ mounted }: { mounted: boolean }): JSX.Element {
   return (
     <div
       className={`loader-container flex items-center justify-center duration-[2000ms] transition-all ${
-        mounted
+        delayedMounted
           ? "-z-10 transform -translate-y-1/2 -translate-x-1/2 opacity-40 fixed size-[176px]"
           : "transform translate-y-0 fixed z-20 backdrop-blur-md w-dvw h-dvh"
       }`}
@@ -27,7 +36,7 @@ export function WebsiteLoader({ mounted }: { mounted: boolean }): JSX.Element {
             />
           ))}
         </div>
-        {!mounted && (
+        {!delayedMounted && (
           <div className="text font-mono dark:text-yellow-500 text-green-900 font-bold text-center text-wrap">
             Just a moment buddy...
           </div>

@@ -9,7 +9,6 @@ const TogglingText = () => {
     "Gaming",
     "Lifelong Learner",
     "Tech Enthusiast",
-    "Loves Music",
     "BlockChain",
   ];
 

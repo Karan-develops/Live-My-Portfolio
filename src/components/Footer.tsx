@@ -68,6 +68,7 @@ export default function Footer() {
                 linkedin:
                   "https://www.linkedin.com/in/karan-aggarwal-50a12b2b9/",
                 github: "https://github.com/Karan-develops",
+                discord:"http://discord.com/users/karan._.0_10611"
               }}
             />
           </div>

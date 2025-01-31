@@ -10,8 +10,6 @@ import react from "../assets/react.svg";
 import express from "../images/lang/ex.png";
 import mg from "../images/lang/mongodb.png";
 import node from "../images/lang/node.png";
-import sql from "../images/lang/sql.png";
-import bs from "../images/lang/bs.png";
 import c from "../images/lang/c.png";
 import redux from "../images/lang/redux.png";
 import git from "../images/lang/git.png";
@@ -19,13 +17,14 @@ import cpp from "../images/lang/cpp.png";
 import redis from "../images/lang/redis.png";
 import typeS from "../images/lang/typeS.png";
 import zustand from "../images/lang/zustand.jpg";
-import convex from "../images/lang/convex.jpg";
 import mongoose from "../images/lang/mongoose.png";
 import next from "../images/lang/next.jpg";
 import sanity from "../images/lang/sanity.png";
 import auth from "../images/lang/authjs.jpg";
 import clerk from "../images/lang/clerk.png";
 import prisma from "../images/lang/prisma.jpg";
+import postgres from "../images/lang/postgres.png";
+import graphql from "../images/lang/graphql.jpg";
 
 const skillsData = [
   { name: "HTML", img: html, imgClass: "skill_img mt-1" },
@@ -56,10 +55,9 @@ const skillsData = [
   { name: "GIT", img: git, imgClass: "w-[50px] h-[47px] mt-2" },
   { name: "C++", img: cpp, imgClass: "skill_c3 invert" },
   { name: "GITHUB", img: github, imgClass: "skill_c4 mt-4 rounded-full" },
-  { name: "SQL", img: sql, imgClass: "skill_c3" },
+  { name: "Postgres", img: postgres, imgClass: "skill_c3 rounded-full" },
   { name: "Tailwind", img: ts, imgClass: "skill_c3" },
   { name: "Mongoose", img: mongoose, imgClass: "skill_c5 mt-2 rounded-full" },
-  { name: "BootStrap", img: bs, imgClass: "skill_c3" },
   { name: "Redis", img: redis, imgClass: "skill_c3" },
   { name: "Zustand", img: zustand, imgClass: "skill_c3 rounded-full" },
   { name: "TypeScript", img: typeS, imgClass: "skill_c2" },
@@ -67,8 +65,8 @@ const skillsData = [
   { name: "Sanity", img: sanity, imgClass: "skill_c2 rounded-full" },
   { name: "Auth JS", img: auth, imgClass: "skill_c1" },
   { name: "Clerk", img: clerk, imgClass: "skill_c1" },
-  { name: "Convex", img: convex, imgClass: "skill_c1" },
   { name: "Prisma", img: prisma, imgClass: "skill_c1" },
+  { name: "Graphql", img: graphql, imgClass: "skill_c1" },
 ];
 
 const Skills = () => {
