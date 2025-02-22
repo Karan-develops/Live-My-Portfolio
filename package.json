@@ -12,6 +12,7 @@
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@emailjs/browser": "^4.4.1",
+    "@vercel/analytics": "^1.5.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "lucide-react": "^0.453.0",
