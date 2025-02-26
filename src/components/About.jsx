@@ -19,7 +19,7 @@ const About = () => {
         id="about"
         className="flex md:flex-row flex-col mt-5 justify-around py-30 items-center lg:h-[100vh]"
       >
-        <div data-aos="fade-up">
+        <div>
           <Orbit />
         </div>
         <div data-aos="fade-left" className="flex flex-col items-center">
@@ -34,15 +34,15 @@ const About = () => {
                 as={SiStackoverflow}
                 color="red.500"
               />
-              Full Stack Stack Developer
+              Full Stack Stack Developer.
             </ListItem>
             <ListItem className="text-white sm:text-lg text-sm">
               <ListIcon className="text-2xl" as={FiCpu} color="yellow.500" />
-              Interested in BlockChain
+              Interested in BlockChain.
             </ListItem>
             <ListItem className="text-white sm:text-lg text-sm">
               <ListIcon className="text-2xl " as={TreePalm} color="green.500" />
-              Data Structures and Algorithms (DSA) Enthusiast
+              Data Structures and Algorithms (DSA) Enthusiast.
             </ListItem>
             <ListItem className="text-white sm:text-lg text-sm">
               <ListIcon
@@ -50,7 +50,7 @@ const About = () => {
                 as={BicepsFlexed}
                 color="purple.500"
               />
-              Love building scalable applications and exploring new technologies
+              Love building scalable applications and exploring new technologies.
             </ListItem>
             <ListItem className="text-white sm:text-lg text-sm">
               <ListIcon className="text-2xl " as={Flame} color="orange.500" />
@@ -63,7 +63,7 @@ const About = () => {
                 color="cyan.500"
               />
               Passionate about interactive UIs, performance optimization &
-              problem-solving
+              problem-solving.
             </ListItem>
           </List>
           <div className="mt-10 sm:px-0 px-10">
@@ -95,7 +95,7 @@ const About = () => {
           </div>
           <div className="flex sm:justify-start justify-center mb-7">
             <a
-              href="https://drive.google.com/file/d/1hi-ybvs8fCnR8aqLQVqm_6PVH5rhd9-2/view?usp=sharing"
+              href="https://drive.google.com/file/d/1TGj1XzA9Lg0bFA72yYCwK2eXDfKklRTC/view"
               target="_blank"
             >
               <button className="px-[20px] py-2 shadow-2xl text-white bg-green-700 flex items-center gap-2  outline-none border-none hover:ring-1 ring-teal-400">
