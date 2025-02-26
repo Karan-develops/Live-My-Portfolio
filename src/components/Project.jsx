@@ -8,11 +8,14 @@ import codeEd from "../images/projects/codeEd.png";
 import momentz from "../images/projects/momentz.png";
 import newzly from "../images/projects/newzly.png";
 import bookops from "../images/projects/bookops.png";
+import campus from "../images/projects/campus.png";
 import {
   BookMarkedIcon,
   BugPlay,
   GithubIcon,
+  GraduationCap,
   LucideChartNoAxesCombined,
+  Medal,
   MessageCircleCodeIcon,
   MoonStar,
   Newspaper,
@@ -22,6 +25,27 @@ import {
 import { BiStore } from "react-icons/bi";
 
 const projectsData = [
+  {
+    id: 0,
+    image: campus,
+    title: "Open Source Campus Connect",
+    icon: <GraduationCap className="text-emerald-500 mr-1 -mt-1 text-2xl" />,
+    deployedStatus: "Un-Deployed 💻",
+    liveUrl: "https://github.com/Karan-develops",
+    githubUrl: "https://github.com/Karan-develops/Campus-Connect",
+    description: [
+      "• User authentication and authorization.",
+      "• Profile management for Users.",
+      "• Connect with Peers & Grow your Network.",
+      "• Event scheduling and notifications.",
+      "• Discussion forums and messaging.",
+      "• Course Details and Forms.",
+      "• Brilliant UI & UX.",
+      "• Create & Organize Clubs, Sports, Events.",
+      "• ShowCase your Projects.",
+    ],
+    tech: "Technologies Used:- NextJS, React.js, React.js , Shadcn-ui, TailwindCSS, TypeScript, Zod - Form Validation, Framer-motion, State Management:Zustand, Node.js, Prisma, Express-JS, Mongoose, Neon, PostgreSQL, MongoDB, Clerk, vercel.",
+  },
   {
     id: 1,
     image: codeEd,
@@ -157,8 +181,21 @@ const Project = () => {
           <div
             key={project.id}
             data-aos="zoom-in-up"
-            className="project_card_div"
+            className="project_card_div relative"
           >
+            {project.id === 0 && (
+              <>
+                <div className="absolute top-3 left-0 bg-transparent text-green-400 px-3 py-1 rounded-br-md">
+                  Open Source <Medal />
+                </div>
+                <div className="absolute top-3 left-10">
+                  <span className="flex size-[11px]">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-600 opacity-75"></span>
+                    <span className="relative inline-flex size-[11px] bg-emerald-600 rounded-full"></span>
+                  </span>
+                </div>
+              </>
+            )}
             <div className="rounded-2xl">
               <img
                 className="project_card_img"
